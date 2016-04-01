@@ -84,16 +84,28 @@ def genetic_algorithm(init_pop,mutProb=0.1,time=1000,debug=False):
 	return None,t
 	
 
-trials = 20
-solved = 0
-init_pop_size = 16
-for i in range(trials):	
-	init_pop = []
-	for j in range(init_pop_size):
-		init_pop.append(generate_instance())	
-	res,t = genetic_algorithm(init_pop,0.1,10000,False)
-	print decode(res)
-	if res!=None:
-		solved += 1
-	print 'time taken:' + str(t)
-print 'total solved instaces:' + str(solved)
+def ex4():
+	trials = 20
+	solved = 0
+	mutProb = 0.1
+	init_pop_size = 16
+	max_time_allowed = 10000
+
+	print 'Trails:' + str(trials)
+	print 'Mutation Prob:' + str(mutProb)
+	print 'Initial Population:' + str(init_pop_size)
+	print 'Max time allowed:' + str(10000)
+
+	for i in range(trials):	
+		init_pop = []
+		for j in range(init_pop_size):
+			init_pop.append(generate_instance())	
+		res,t = genetic_algorithm(init_pop,mutProb,max_time_allowed,False)
+		print decode(res)
+		if res!=None:
+			solved += 1
+		print 'time taken:' + str(t)
+	print 'total solved instaces:' + str(solved)
+
+if __name__ == '__main__':	
+	ex4()
