@@ -87,7 +87,7 @@ def simulated_annealing(start,debug=False):
 	return current,attacking
 
 def ex3():
-	instances = 10
+	instances = 20
 	init_state = []
 	resutls_rr = []
 	resutls_sa = []

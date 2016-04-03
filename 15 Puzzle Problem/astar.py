@@ -170,7 +170,7 @@ class ASTAR():
 						break
 
 				if neighbourInOpnedList == False:					
-					tempScore = tentative_gScore + self.heuristic_cost_estimate(neighbour,goal)					
+					tempScore = tentative_gScore + self.heuristic_cost_estimate(neighbour,goal)
 					count += 1
 					openList.put((tempScore,count,xneighbour))
 					#print neighbour
@@ -190,16 +190,6 @@ class ASTAR():
 		print 'No Solution Exists'	
 		return ''
 
-
-class IDASTAR():
-
-	def ida_start(self,current):
-		pass
-
-	def search():
-		pass
-
-
 def ex1():
 	trails = 1
 	nums = [i for i in range (16)]	
@@ -214,9 +204,6 @@ def ex1():
 		print 'Nodes generated:' + str(totalNodes)
 		for i in range(len(resultPath)-1,-1,-1):
 			print resultPath[i]
-
-def ex1_2():
-	pass
 
 if __name__ == '__main__':	
 	ex1()

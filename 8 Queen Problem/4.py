@@ -89,12 +89,12 @@ def ex4():
 	solved = 0
 	mutProb = 0.1
 	init_pop_size = 16
-	max_time_allowed = 10000
+	max_time_allowed = 30000
 
 	print 'Trails:' + str(trials)
 	print 'Mutation Prob:' + str(mutProb)
 	print 'Initial Population:' + str(init_pop_size)
-	print 'Max time allowed:' + str(10000)
+	print 'Max time allowed:' + str(max_time_allowed)
 
 	for i in range(trials):	
 		init_pop = []
